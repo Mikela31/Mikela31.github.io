@@ -36,7 +36,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: var(--font-heading);
     margin-bottom: var(--space-1);
 }
-/**********************************  SWATCHES  ***********************************/
+/**********************************  COLORS  ***********************************/
 .bg-primary{background-color: var(--primary);}
 .bg-light{ background-color:var(--light);}
 .bg-dark{ background-color:var(--dark);}
@@ -49,14 +49,37 @@ h1,h2,h3,h4,h5,h6{
 
 
 .shadow-dark{box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(46,40, 35,0.2);}
+/**********************************  LAYOUT  ***********************************/
+.d-flex{display:flex; }
+.flex-between { justify-content: space-between;}
+
+.grid-2col{
+    display: grid;
+    grid-template-columns: repeat( 2,1fr); /* fr- is fraction*/
+}
+.grid-3col{
+    display: grid;
+    grid-template-columns: repeat( 3,1fr); /* fr- is fraction*/
+}
+/**********************************  SPACING  ***********************************/
+
+
+.m-0{ margin: var(--space-0); }
+.m-1{ margin: var(--space-1); }
+.m-2{ margin: var(--space-2); }
+.m-3{ margin: var(--space-3); }
+
+.p-0{padding:var(--space-0); }
+.p-1{padding:var(--space-1); }
+.p-2{padding:var(--space-2); }
+.p-3{padding:var(--space-3); }
+
+.gap-0{ gap :var(--space-0); }
+.gap-1{ gap :var(--space-1); }
+.gap-2{ gap :var(--space-2); }
+.gap-3{ gap :var(--space-3); }
 
 /**********************************  SWATCHES  ***********************************/
-
-.swatches{
-    display: flex;
-    gap: var(--space-2);
-}
-
 
 .swatch .swatch-value{
     aspect-ratio: 1/1;
@@ -64,3 +87,8 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 100%;
     
 }
+
+.swatch .swatch-name {
+text-align: center;
+}
+    
