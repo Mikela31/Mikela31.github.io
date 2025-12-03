@@ -1,94 +1,212 @@
-
-/*Imported from google fotns*/
+/* Imports Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* The brand variables*/
-:root{
-    --primary:#7b4c2f;
-    --light:#fffdf8;
-    --dark:#2e2823;
-    --muted:#f8f6f5;
+/* The brand variables */
+:root {
+    --primary: #7b4c2f;
+    --primary-tint: #a47354;
+    --primary-shade: #572f15;
 
-    --font-base:Roboto, Verdana, sans-serif;
-    --font-heading:'Noto Serif', serif;
-    
-    --font-size:16px;
-    --font-size-sm:0.8rem;
-    --font-size-lg:1.2rem;
+    --light: #fffdf8;
+    --dark: #2e2823;
 
-    --space-0:0rem;
-    --space-1:0.5rem;
-    --space-2:0.5rem;
-    --space-3:2rem
+    --muted: #e8e6e5;
+    --muted-tint: #f8f6f5;
+    --muted-shade: #d8d6d5;
+
+    --font-base: Roboto, Verdana, sans-serif;
+    --font-heading: 'Noto Serif', serif;
+
+    --font-size: 16px;
+    --font-size-sm: 0.8rem;
+    --font-size-lg: 1.2rem;
+
+    --space-0: 0;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
+
+    --border-light: 4px solid var(--light);
+    --border-radius: 0.5rem;
 }
-/* Css reset*/
-*{
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: var(--font-base);
     line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     margin-bottom: var(--space-1);
 }
-/**********************************  COLORS  ***********************************/
-.bg-primary{background-color: var(--primary);}
-.bg-light{ background-color:var(--light);}
-.bg-dark{ background-color:var(--dark);}
-.bg-muted{background-color: var(--muted);}
 
-.text-primary{color: #7b4c2f;}
-.text-light{ color: #fffdf8;}
-.text-dark{ color: #2e2823;}
-.text-muted{color: #f8f6f5;}
-
-
-.shadow-dark{box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(46,40, 35,0.2);}
-/**********************************  LAYOUT  ***********************************/
-.d-flex{display:flex; }
-.flex-between { justify-content: space-between;}
-
-.grid-2col{
-    display: grid;
-    grid-template-columns: repeat( 2,1fr); /* fr- is fraction*/
+/*************************************** BUTTONS ***************************************/
+.btn {
+    padding: var(--space-1) var(--space-2);
+    border: none;
+    border-radius: var(--space-2);
+    cursor: pointer;
 }
-.grid-3col{
-    display: grid;
-    grid-template-columns: repeat( 3,1fr); /* fr- is fraction*/
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
 }
-/**********************************  SPACING  ***********************************/
+.btn-primary:hover { /* mouse over button */
+    background-color: var(--primary-tint);
+}
+.btn-primary:active { /* while button is being clicked */
+    background-color: var(--primary-shade);
+}
 
+.btn-secondary {
+    background-color: var(--muted);
+    color: var(--dark);
+}
+.btn-secondary:hover {
+    background-color: var(--muted-tint);
+}
+.btn-secondary:active {
+    background-color: var(--muted-shade);
+}
 
-.m-0{ margin: var(--space-0); }
-.m-1{ margin: var(--space-1); }
-.m-2{ margin: var(--space-2); }
-.m-3{ margin: var(--space-3); }
+.link {
+    color: var(--primary);
+    text-decoration: underline;
+}
+.link:hover {
+    color: var(--primary-tint);
+}
+.link:active {
+    color: var(--primary-shade);
+}
 
-.p-0{padding:var(--space-0); }
-.p-1{padding:var(--space-1); }
-.p-2{padding:var(--space-2); }
-.p-3{padding:var(--space-3); }
+/*************************************** COLORS ***************************************/
+.bg-primary { background-color: var(--primary); }
+.bg-light { background-color: var(--light); }
+.bg-dark { background-color: var(--dark); }
+.bg-muted { background-color: var(--muted); }
 
-.gap-0{ gap :var(--space-0); }
-.gap-1{ gap :var(--space-1); }
-.gap-2{ gap :var(--space-2); }
-.gap-3{ gap :var(--space-3); }
+.text-primary { color: var(--primary); }
+.text-light { color: var(--light); }
+.text-dark { color: var(--dark); }
+.text-muted { color: var(--muted); }
 
-/**********************************  SWATCHES  ***********************************/
+.shadow-dark { box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(46, 40, 35, 0.2); }
+.shadow-light { box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5); }
 
-.swatch .swatch-value{
-    aspect-ratio: 1/1;
+/*************************************** COMPONENTS ***************************************/
+.product-image {
+    position: relative;
+}
+.product-image img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    border: var(--border-light);
+    border-radius: var(--border-radius);
+}
+.product-image .image-tag {
+    background-color: var(--dark);
+    color: var(--light);
+
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+
+    position: absolute;
+    left: var(--space-2);
+    top: var(--space-2);
+}
+
+.tags {
+    display: flex;
+    gap: var(--space-1);
+    list-style: none;
+}
+.tags .tag-item {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--space-3);
+    text-decoration: none;
+}
+
+/*************************************** LAYOUT ***************************************/
+.container {
+    max-width: 1280px;
+    margin: var(--space-2) auto;
+}
+
+.border-rounded { border-radius: var(--border-radius); }
+
+.d-flex { display: flex; }
+.flex-between { justify-content: space-between; }
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* fr - fraction */
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* fr - fraction */
+}
+
+/*************************************** SPACING ***************************************/
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+
+.p-0 { padding: var(--space-0); }
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+
+.gap-0 { gap: var(--space-0); }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+
+/*************************************** SWATCHES ***************************************/
+.swatch .swatch-value {
+    aspect-ratio: 1 / 1;
     width: 3rem;
     border-radius: 100%;
-    
 }
 
 .swatch .swatch-name {
-text-align: center;
+    text-align: center;
 }
-    
+
+/*************************************** TEXT ***************************************/
+.line-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+
+    height: 1.5rem;
+    overflow: clip;
+    text-overflow: ellipsis;
+}
+
+.line-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+    height: 3rem;
+    overflow: clip;
+    text-overflow: ellipsis;
+}
