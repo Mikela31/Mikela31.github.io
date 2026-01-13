@@ -127,6 +127,37 @@ h1, h2, h3, h4, h5, h6 {
     top: var(--space-2);
 }
 
+.profile {
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: auto 1fr;
+    column-gap: var(--space-2);
+
+
+}
+
+
+.profile img {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    object-fit: cover;
+
+    grid-column: 1;
+    grid-row: span 2;
+}
+
+.profile .name{
+
+    grid-column:2;
+    grid-row: 1;
+}
+
+.profile .job-title{
+    grid-column: 2;
+    grid-row: 2;
+}
+
 .tags {
     display: flex;
     gap: var(--space-1);
@@ -209,4 +240,52 @@ h1, h2, h3, h4, h5, h6 {
     height: 3rem;
     overflow: clip;
     text-overflow: ellipsis;
+}
+/*************************Contact Form******************************/
+.contact-form label {
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea
+.contact-form select{
+
+    appearance: none;
+
+    border-color: var(--muted);
+    border-width: 1px;
+    border-style:solid;
+    border-radius:4px;
+
+    display: block;
+    width: 100%;
+
+    font-size: 1em;
+    font-family: var(--font-base);
+    padding: var(--space-1);
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form div{
+    margin:var(--space-1) 0;
+}
+
+
+
+/*************************Mobile Layout***************************************/
+@media ( Max-width:600px) {
+
+    .sm-grid_1col {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .sm-grid-2col{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
 }
