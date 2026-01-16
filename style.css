@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*********************** welcome page********************/
 /* STYLE GUIDE - colours */
 :root {
     --navy: #00004F;
@@ -62,40 +62,15 @@ body {
     font-weight: 600;
 }
 
-/* HERO / SLIDER */
-.hero {
-    position: relative;
-    background-color: var(--muted-blue);
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* HERO image  */
 
-.hero-placeholder {
+.hero-image {
+    height: 320px;
     width: 100%;
-    height: 100%;
-    background:
-        linear-gradient(45deg, transparent 49%, #ffffff50 50%, transparent 51%),
-        linear-gradient(-45deg, transparent 49%, #ffffff50 50%, transparent 51%);
-}
-
-/* SLIDER ARROWS */
-.arrow {
-    position: absolute;
-    background: none;
-    border: none;
-    font-size: 28px;
-    color: var(--white);
-    cursor: pointer;
-}
-
-.arrow.left {
-    left: 20px;
-}
-
-.arrow.right {
-    right: 20px;
+    background-image: url("https://mcast.edu.mt/wp-content/uploads/Web-Banner-10.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* ABOUT SECTION */
@@ -130,9 +105,367 @@ body {
     transition: background-color 0.2s ease;
 }
 
+.apply-link {
+    text-decoration: double;
+}
 .btn-apply:hover {
     background-color: var(--blue);
 }
+
+/********************* interests ****************/
+/*fire*/
+:root {
+    --navy: #00004F;
+    --blue: #4154A5;
+    --muted-blue: #6E77B9;
+    --light-bg: #CDD3FF;
+    --white: #FFFFFF;
+    --soft-grey: #E5E5E5;
+}
+/* MAIN CONTAINER */
+.container {
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 50px 40px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+/* PAGE HEADING */
+.page-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* INTEREST CARDS */
+.interest-card {
+    background-color: var(--soft-grey);
+    border-radius: 14px;
+    padding: 30px 20px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest-icon {
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+
+.interest-card p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/**************** mqf levels *********************/
+
+/* MAIN CONTAINER */
+.container {
+    background-color: var(--white);
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* INSTITUTE LABEL */
+.institute-pill {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 12px 80px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* MQF GRID */
+.mqf-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    max-width: 900px;
+}
+
+/* MQF BUTTONS */
+.mqf-btn {
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mqf-btn:hover {
+    background-color: var(--blue);
+}
+
+/* WIDE BUTTON */
+.mqf-btn.wide {
+    grid-column: span 2;
+}
+
+/************** course list****************/
+/* MAIN CONTAINER */
+.container {
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 14px;
+}
+
+/* PILLS */
+.institute-pill {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 10px 24px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.level-pill {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* COURSE LIST */
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* COURSE LIST */
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.course-item {
+    height: 42px;
+    background-color: var(--soft-grey);
+    border-radius: 20px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+
+/* IMAGE */
+.course-image {
+    height: 260px;
+    background-color: var(--muted-blue);
+    border-radius: 10px;
+    background-image:
+        linear-gradient(45deg, transparent 49%, #ffffff50 50%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #ffffff50 50%, transparent 51%);
+    background-size: cover;
+}
+
+/********contact us*****************/
+
+
+/* MAIN CONTAINER */
+.container {
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 14px;
+}
+
+/* PAGE TITLE PILL */
+.page-pill {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* BOXES */
+.contact-box {
+    background-color: var(--soft-grey);
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.contact-box h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input,
+textarea {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+/* BUTTONS */
+.btn-send,
+.btn-locations {
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn-send:hover,
+.btn-locations:hover {
+    background-color: var(--blue);
+}
+
+/* MAP */
+.map {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 16px;
+}
+
+/* CONTACT INFO */
+.contact-info p {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 .footer {
