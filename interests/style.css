@@ -1,0 +1,117 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STYLE GUIDE VARIABLES */
+:root {
+    --navy: #00004F;
+    --blue: #4154A5;
+    --muted-blue: #6E77B9;
+    --light-bg: #CDD3FF;
+    --white: #FFFFFF;
+    --soft-grey: #E5E5E5;
+}
+
+/* BODY */
+body {
+    font-family: 'Montserrat', Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--navy);
+}
+
+/* HEADER */
+.header {
+    background-color: var(--navy);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+}
+
+.header-left .icon {
+    margin-right: 16px;
+}
+
+.header-center h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-right input {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background-color: var(--white);
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 50px 40px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+/* PAGE HEADING */
+.page-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* INTEREST CARDS */
+.interest-card {
+    background-color: var(--soft-grey);
+    border-radius: 14px;
+    padding: 30px 20px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest-icon {
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+
+.interest-card p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--navy);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    font-size: 14px;
+}
+
+.footer-left span {
+    margin-right: 20px;
+}
+
+.footer-right span {
+    margin-left: 14px;
+}
