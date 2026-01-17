@@ -300,17 +300,13 @@ body {
     font-weight: 600;
     color: var(--navy);
 }
-
-
-/* IMAGE */
-.course-image {
-    height: 260px;
-    background-color: var(--muted-blue);
+.hero-image {
+    height: 400px;
     border-radius: 10px;
-    background-image:
-        linear-gradient(45deg, transparent 49%, #ffffff50 50%, transparent 51%),
-        linear-gradient(-45deg, transparent 49%, #ffffff50 50%, transparent 51%);
+   background-image: url(https://www.facebook.com/MCASTmt/posts/-mcast-at-malta-fashion-week-2025-our-talented-fashion-students-from-the-institu/1078355461058401/);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /********contact us*****************/
