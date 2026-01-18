@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 /*********************** welcome page********************/
 /* STYLE GUIDE - colours */
 :root {
@@ -50,6 +52,10 @@ body {
     outline: none;
 }
 
+.header-link{
+    color:inherit;
+    text-decoration: none;
+}
 /* PAGE TITLE */
 .page-title {
     background-color: var(--white);
@@ -62,9 +68,9 @@ body {
     font-weight: 600;
 }
 
-/* HERO image  */
+/* welcome image  */
 
-.hero-image {
+.welcome-image {
     height: 320px;
     width: 100%;
     background-image: url("https://mcast.edu.mt/wp-content/uploads/Web-Banner-10.jpg");
@@ -172,6 +178,23 @@ body {
     color: var(--navy);
 }
 
+
+.interest-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.interactive{
+    cursor: pointer;
+    transition: background-color 0.2 ease;
+}
+
+.interactive:hover{
+    background-color: #d0d0d0;
+}
+
+
+
 /**************** mqf levels *********************/
 
 /* MAIN CONTAINER */
@@ -208,6 +231,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 40px;
     max-width: 900px;
+    margin: 0 auto;
 }
 
 /* MQF BUTTONS */
@@ -215,16 +239,25 @@ body {
     background-color: var(--navy);
     color: var(--white);
     border: none;
-    padding: 14px 20px;
+    padding: 15px 30px;
     font-size: 16px;
-    font-weight: 600;
-    border-radius: 10px;
+    font-weight: 700;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    width: 100%;
 }
 
 .mqf-btn:hover {
     background-color: var(--blue);
+}
+
+.mqf-link{
+text-decoration: none;
+}
+
+.mqf-link.full-width {
+    display: block;
 }
 
 /* WIDE BUTTON */
@@ -232,6 +265,12 @@ body {
     grid-column: span 2;
 }
 
+.contact-grid
+.mqf-grid
+.interest-grid
+.contact-grid{
+    justify-content: center;
+}
 /************** course list****************/
 /* MAIN CONTAINER */
 .container {
@@ -279,14 +318,6 @@ body {
     gap: 16px;
 }
 
-
-/* COURSE LIST */
-.course-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
 .course-item {
     height: 42px;
     background-color: var(--soft-grey);
@@ -300,10 +331,10 @@ body {
     font-weight: 600;
     color: var(--navy);
 }
-.hero-image {
-    height: 400px;
+.course-image {
+    height: 350px;
     border-radius: 10px;
-   background-image: url(https://www.facebook.com/MCASTmt/posts/-mcast-at-malta-fashion-week-2025-our-talented-fashion-students-from-the-institu/1078355461058401/);
+    background-image: url("assets/mcast-course.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -402,63 +433,6 @@ textarea {
     margin-bottom: 6px;
     font-size: 14px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
